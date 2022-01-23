@@ -17,7 +17,7 @@ function AddToDo(props) {
 
   function addToList() {
     if (item && Number(priority) && Number.isInteger(Number(priority)) && priority > 0) {
-      if (!priorityList.includes(priority) || priorityList.length === 0) {
+      if (!priorityList.includes(Number(priority)) || priorityList.length === 0) {
         const toDoListArray = [...toDoList]
         toDoListArray.push({ item, priority })
         setToDoList(toDoListArray)
